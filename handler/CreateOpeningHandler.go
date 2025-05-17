@@ -7,5 +7,5 @@ import (
 )
 
 func CreateOpeningHandler(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"msg": "GET Opening"})
+	c.JSON(http.StatusOK, gin.H{"msg": "POST Opening"})
 }

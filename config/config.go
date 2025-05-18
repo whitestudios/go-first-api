@@ -23,8 +23,8 @@ func Init() error {
 	return nil
 }
 
-func GetSQLite() {
-
+func GetSQLite() *gorm.DB {
+	return db
 }
 
 func GetLogger(p string) *Logger {

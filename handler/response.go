@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/whitestudios/go-first-api/schemas"
 )
 
 func sendError(c *gin.Context, code int, message string) {
@@ -20,4 +21,14 @@ func sendSuccess(c *gin.Context, op string, data any) {
 		"message": fmt.Sprintf("operation from handler: %s successfull", op),
 		"data":    data,
 	})
+}
+
+type ErrorResponse struct {
+	Message   string `json:"message"`
+	ErrorCode string `json:"ErrorCode"`
+}
+
+type CreateOpeningResponse struct {
+	Message string                  `json:"message"`
+	Data    schemas.OpeningResponse `json:"data"`
 }

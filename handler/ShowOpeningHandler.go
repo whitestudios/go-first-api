@@ -7,6 +7,19 @@ import (
 	"github.com/whitestudios/go-first-api/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Show opening
+// @Description Show a job opening by id
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHandler(c *gin.Context) {
 	opening := schemas.Opening{}
 	id := c.Query("id")

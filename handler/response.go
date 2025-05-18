@@ -28,7 +28,27 @@ type ErrorResponse struct {
 	ErrorCode string `json:"ErrorCode"`
 }
 
+type UpdateOpeningResponse struct {
+	Message string                  `json:"message"`
+	Data    schemas.OpeningResponse `json:"data"`
+}
+
 type CreateOpeningResponse struct {
 	Message string                  `json:"message"`
 	Data    schemas.OpeningResponse `json:"data"`
+}
+
+type ShowOpeningResponse struct {
+	Message string                  `json:"message"`
+	Data    schemas.OpeningResponse `json:"data"`
+}
+
+type DeleteOpeningResponse struct {
+	Message string                  `json:"message"`
+	Data    schemas.OpeningResponse `json:"data"`
+}
+
+type ListOpeningResponse struct {
+	Message string                    `json:"message"`
+	Data    []schemas.OpeningResponse `json:"data"`
 }

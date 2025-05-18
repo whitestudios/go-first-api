@@ -46,7 +46,7 @@ func InitializeSqlite() (*gorm.DB, error) {
 		return nil, err
 	}
 
-	// Migrate Schamas
+	// Migrate Schemas
 	err = db.AutoMigrate(&schemas.Opening{})
 
 	if err != nil {
@@ -57,4 +57,3 @@ func InitializeSqlite() (*gorm.DB, error) {
 	// return the DB
 	return db, nil
 }
-
